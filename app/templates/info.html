@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<h1 class="col-md-6 offset-md-5">简约即是美</h1>
+<div class="row justify-content-md-center" style="margin: 20px auto">
+    {% for type in type_list %}
+        {% if type.color == 1 %}
+            <div class="alert alert-primary col-9" role="alert">
+        {% elif type.color == 2 %}
+            <div class="alert alert-secondary col-9" role="alert">
+        {% elif type.color == 3 %}
+            <div class="alert alert-success col-9" role="alert">
+        {% elif type.color == 4 %}
+            <div class="alert alert-danger col-9" role="alert">
+        {% elif type.color == 5 %}
+            <div class="alert alert-warning col-9" role="alert">
+        {% elif type.color == 6 %}
+            <div class="alert alert-info col-9" role="alert">
+        {% elif type.color == 7 %}
+            <div class="alert alert-primary col-9" role="alert">
+        {% elif type.color == 8 %}
+            <div class="alert alert-dark col-9" role="alert">
+        {% endif %}
+    <div class="row">
+        <div class="col-md-4"><a href="{{ type.url }}">{{ type.title }}</a></div>
+        <div class="col-auto"> 添加时间：{{ type.time }}</div>
+        <div class="col-md-2 ml-auto"><a href="">
+            <svg class="bi bi-emoji-sunglasses" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd"
+                      d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM6.5 6.497V6.5h-1c0-.568.447-.947.862-1.154C6.807 5.123 7.387 5 8 5s1.193.123 1.638.346c.415.207.862.586.862 1.154h-1v-.003l-.003-.01a.213.213 0 0 0-.036-.053.86.86 0 0 0-.27-.194C8.91 6.1 8.49 6 8 6c-.491 0-.912.1-1.19.24a.86.86 0 0 0-.271.194.213.213 0 0 0-.036.054l-.003.01z"/>
+                <path d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z"/>
+            </svg>
+            有用（{{ type.like_numb }}）</a></div>
+        <div class="col-auto">看过（{{ type.read_numb }}）</div>
+    </div>
+
+    </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

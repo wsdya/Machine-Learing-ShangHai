@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="python@wsdyasql.mysql.rds.aliyuncs.com" uuid="4901a47a-a173-4bd8-a4a6-838e97e48343">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://wsdyasql.mysql.rds.aliyuncs.com:3306/python</jdbc-url>
+    </data-source>
+  </component>
+</project>
